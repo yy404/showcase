@@ -29,3 +29,13 @@ In addition, NPCs can be told to do a Custom Task by adding custom logic.
 ***Club Scene Prototype (Video in 26s):***
 
 [![Club Scene Prototype](http://img.youtube.com/vi/3V_RR_bHeis/0.jpg)](http://www.youtube.com/watch?v=3V_RR_bHeis "Club Scene Prototype")
+
+
+Screenshot (Club Scene)
+![Screenshot (Club Scene)](pics/pic1.png "Screenshot (Club Scene)")
+
+Screenshot (Main Logic for Locomotions)
+![Screenshot (Main Logic for Locomotions)](pics/pic2.png "Screenshot (Main Logic for Locomotions)")
+
+Screenshot (Animation Blueprints for Locomotions)
+![Screenshot (Animation Blueprints for Locomotions)](pics/pic3.png "Screenshot (Animation Blueprints for Locomotions)")
