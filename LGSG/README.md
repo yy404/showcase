@@ -1,4 +1,4 @@
-# Light Gun Shooter Game
+## Light Gun Shooter Game
 
 ## Intro
 
