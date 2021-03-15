@@ -5,7 +5,6 @@ Timberman is a 2D retro-style casual game. The game is built from scratch using 
 ![Timberman demo gif](pics/TimbermanGif.gif)
 
 ```c++
-#include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 
 // Your resource files (images, sounds, fonts, ...) are also copied to your
