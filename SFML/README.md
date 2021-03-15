@@ -1,4 +1,10 @@
-```C++
+[SFML](https://www.sfml-dev.org/) is a C++ library for a simple application programming interface to various multimedia components in computers.
+
+Timberman is a 2D retro-style casual game. The game is built from scratch using the SFML library, based on the ["Beginning C++ Game Programming"](https://www.udemy.com/course/learning-path-c-game-programming/) course.
+
+![Timberman demo gif](pics/TimbermanGif.gif)
+
+```c++
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 
@@ -106,13 +112,7 @@ int main(int, char const**)
         // Set the sprite's origin to dead centre
         // We can then spin it round without changing its position
         branches[i].setOrigin(220, 20);
-    }
-    
-//    updateBranches(1);
-//    updateBranches(2);
-//    updateBranches(3);
-//    updateBranches(4);
-//    updateBranches(5);    
+    }  
     
     // Prepare the player
     sf::Texture texturePlayer;
@@ -420,10 +420,6 @@ int main(int, char const**)
             // Draw our message
             window.draw(messageText);
         }
-        
-//
-//        // Draw the string
-//        window.draw(text);
 
         // Update the window
         window.display();
