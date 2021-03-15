@@ -1,3 +1,15 @@
+[Boost.Asio](https://www.boost.org/doc/libs/1_75_0/doc/html/boost_asio.html) is a C++ library for network and low-level I/O programming.
+
+One of its [official examples](https://www.boost.org/doc/libs/1_75_0/doc/html/boost_asio/examples/cpp11_examples.html) shows the use of multicast to transmit packets to a group of subscribers.
+This official multicast example includes two programs: 
+[receiver.cpp](https://www.boost.org/doc/libs/1_75_0/doc/html/boost_asio/example/cpp11/multicast/receiver.cpp) 
+and [sender.cpp](https://www.boost.org/doc/libs/1_75_0/doc/html/boost_asio/example/cpp11/multicast/sender.cpp)
+.
+
+The following Multicast Messenger program is inspired by the official multicast example.
+It works as a transceiver which integrates the functionalities of transmitting and receiving packets.
+Given a multicast address, this messenger program provides a local chat room without relying a specific server.
+
 ```c++
 #include <iostream>
 #include <sstream>
@@ -32,7 +44,13 @@ public:
         receive_socket_.set_option(
             boost::asio::ip::multicast::join_group(multicast_address));
 
+        // Listen to receive data
         do_receive();
+    }
+    
+    ~messenger()
+    {
+        std::cout << "Destructor of the messenger class." << count_ << std::endl;
     }
 
     void do_send(std::string line)
@@ -79,8 +97,8 @@ private:
     boost::asio::ip::udp::socket transmit_socket_;
     boost::asio::ip::udp::socket receive_socket_;
     std::string nickname_;
-    std::string message_;
-    std::array<char, 1024> data_;
+    std::string message_; // the message to send
+    std::array<char, 1024> data_; // the data received
 };
 
 
@@ -88,22 +106,34 @@ int main(int argc, char* argv[])
 {
     try
     {
+        // All programs that use asio need to have at least one I/O execution context.
+        // An I/O execution context provides access to I/O functionality.
         boost::asio::io_context io_context;
-        std::string listen_address_raw = "0.0.0.0";
-        std::string multicast_address_raw = "239.255.0.1";
+        
+        // "0.0.0.0" means listen on every available network interface in this contex
+        std::string listen_address_raw = "0.0.0.0"; 
+        
+        // The multicast addresses range from 239.0.0.0 to 239.255.255.255 are the administratively scoped addresses.
+        // They would be considered local, not globally unique, 
+        // and can be reused in domains administered by different organizations. 
+        std::string multicast_address_raw = "239.255.0.1"; 
 
+        // Construct a new messenger
         messenger s(io_context,
             boost::asio::ip::make_address(listen_address_raw),
             boost::asio::ip::make_address(multicast_address_raw));
 
+        // Use thread t for io_context
         std::thread t([&io_context]() { io_context.run(); });
 
+        // Get and send messages
         std::string line;
         while (std::getline(std::cin, line))
         {
             s.do_send(line);
         }
 
+        // Terminate thread t
         t.join();
     }
     catch (std::exception& e)
