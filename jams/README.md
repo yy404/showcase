@@ -17,8 +17,8 @@
 ## “Keypad Out of Control”
 [https://yy404.itch.io/keypad-out-of-control](https://yy404.itch.io/keypad-out-of-control)
 
-![](https://img.itch.zone/aW1nLzM4NzM0ODkucG5n/original/m099e%2B.png)
-[![Video Link](http://img.youtube.com/vi/5j4CRXnGnLw/0.jpg)](https://youtu.be/5j4CRXnGnLw?t=12701 "Video Link")
+***Played by the Youtuber "Turbo Makes Games" (Video)***
+[![Video Link](pics/pic2.png)](https://youtu.be/5j4CRXnGnLw?t=12701 "Video Link")
 
 ## “KEEP IT ALIVE”
 [https://ldjam.com/events/ludum-dare/46/keep-it-alive-49](https://ldjam.com/events/ludum-dare/46/keep-it-alive-49)
