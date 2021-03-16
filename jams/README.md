@@ -4,12 +4,11 @@
 
 Home Page: [https://yy404.itch.io/](https://yy404.itch.io/)
 
-Participated in:
-* Brackeys Game Jam 2020.2
-* Geta Game Jam 12
-* GMTK Game Jam 2020 
-* Ludum Dare 46
-* Unity "Love & Cupids" Challenge
+* **Brackeys Game Jam 2020.2** *(7 Days in 08/2020)*
+* **Geta Game Jam 12** *(72 Hours in 07/2020)*
+* **GMTK Game Jam 2020** *(48 Hours in 07/2020)*
+* **Ludum Dare 46** *(72 Hours in 04/2020)*
+* **Unity "Love & Cupids" Challenge** *(14 Days in 03/2020)*
 
 ## [Brackeys Game Jam 2020.2: "Melody Questions"](https://yy404.itch.io/melody-questions)
 2D puzzle game for ear training (code/design)
@@ -34,6 +33,6 @@ Participated in:
 ![](pics/pic1.png)
 
 ## [Global Game Jam 2020: "My Plate (Board Game)"](https://globalgamejam.org/2020/games/my-plates-4)
-![](https://ggj.s3.amazonaws.com/styles/game_sidebar__wide/featured_image/2020/02/289128/cover-01_1.jpg?itok=_d_tMAgY&timestamp=1580660311)
+A board game like UNO (on-site team of 4 people)
 ![](https://ggj.s3.amazonaws.com/styles/game_content__wide/games/screenshots/2020/02/282787/img.jpg?itok=Ea1rX1dQ&timestamp=1580662803)
-
+![](https://ggj.s3.amazonaws.com/styles/game_sidebar__wide/featured_image/2020/02/289128/cover-01_1.jpg?itok=_d_tMAgY&timestamp=1580660311)
