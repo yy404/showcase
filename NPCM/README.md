@@ -1,38 +1,36 @@
 # Using NPC Manager System
 
+## Overview
 
-## System Overview
+[The NPC Manager System](https://www.unrealengine.com/marketplace/en-US/product/npc-manager-system) 
+is a product provided by the Unreal Engine marketplace.
 
-The NPC Manager System is for creating NPCs with complex behaviors.
+I made following contributions, by using it in a Third-Person Action Role-Playing Game project (cooperated with 10+ team members).
 
-Specifically, NPCs behave can be customized by using NPC Profiles.
-NPC Profiles are task lists that NPCs will follow as they go about their daily routines.
+## 1. Workflow Documentation
 
-Each task can guide the NPC to 
-* go to a specific Point of Interest (POI)
-* roam inside a volume
-* roam between waypoints
-* follow a path
-* go to a specific location
-* go home
-In addition, NPCs can be told to do a Custom Task by adding custom logic.
+The workflow of using NPC Manager System was documented, based on the [video tutorials](https://www.youtube.com/watch?v=vZ2Svyb1vio&list=PLziQlhUd357hXTKzhm_U5WswPrbJbVRRO).
+This document was used to report weekly to the project leader.
 
+[Document Available Online](https://docs.google.com/document/d/1iXxkULiVVd8wTTEx0adqSmqz9vc8MzKe12o9aDRWOKQ/edit)
 
-## Prototype Development: Club
+## 2. Scene Prototype 
 
+A scene prototype was created as a demonstration, for the team artists who want to make characters act like they are at a club.
 * Objective: Create a simple nightclub with NPCs milling around, watching stages, sitting and chatting, etc.
 * Scene: A club with a bar, several stripper stages, booths, and a mezzanine (overlook) area with stairs.
-* Extra: 
-  * Try to make it look like a popular, packed bar.
-  * Different locomotion states, reaction after bumping
+* Extra: Try to make it look like a popular, packed bar.
  
-***Club Scene Prototype (Video in 26s):***
+***Club Scene Prototype (26s Video):***
 
 [![Club Scene Prototype](http://img.youtube.com/vi/3V_RR_bHeis/0.jpg)](http://www.youtube.com/watch?v=3V_RR_bHeis "Club Scene Prototype")
 
-
 Screenshot (Club Scene)
 ![Screenshot (Club Scene)](pics/pic1.png "Screenshot (Club Scene)")
+
+## 3. Scripts Development
+
+Scripts were developed for NPC locomotions using layered animations. This enables a custom task for walking with upper-body montages (e.g. smoking).
 
 Screenshot (Main Logic for Locomotions)
 ![Screenshot (Main Logic for Locomotions)](pics/pic2.png "Screenshot (Main Logic for Locomotions)")
