@@ -5,14 +5,14 @@
 [The NPC Manager System](https://www.unrealengine.com/marketplace/en-US/product/npc-manager-system) 
 is a product provided by the Unreal Engine marketplace.
 
-I made following contributions, by using it in a Third-Person Action Role-Playing Game project (cooperated with 10+ team members).
+I mainly made 3 contributions, by using it in a Third-Person Action Role-Playing Game project (cooperated with 10+ team members).
 
 ## 1. Workflow Documentation
 
 The workflow of using NPC Manager System was documented, based on the [video tutorials](https://www.youtube.com/watch?v=vZ2Svyb1vio&list=PLziQlhUd357hXTKzhm_U5WswPrbJbVRRO).
 This document was used to report weekly to the project leader.
 
-[Document Available Online](https://docs.google.com/document/d/1iXxkULiVVd8wTTEx0adqSmqz9vc8MzKe12o9aDRWOKQ/edit)
+[Document Available Online as Google Doc](https://docs.google.com/document/d/1iXxkULiVVd8wTTEx0adqSmqz9vc8MzKe12o9aDRWOKQ/edit)
 
 ## 2. Scene Prototype 
 
@@ -30,7 +30,16 @@ Screenshot (Club Scene)
 
 ## 3. Scripts Development
 
-Scripts were developed for NPC locomotions using layered animations. This enables a custom task for walking with upper-body montages (e.g. smoking).
+Scripts were developed for NPC locomotions using layered animations. This enables a custom task for walking with upper-body montages (e.g. talking/smoking).
+
+References: 
+* ["BP 3rd Person Game" Tutorial Series by Unreal Engine](https://www.youtube.com/watch?v=hRO82u1phyw&list=PLhf5YCdusazmDTAEdV5jDhKWeGE1iqF2X)
+* ["Using Layered Animations" Unreal Engine 4 Documentation](https://docs.unrealengine.com/en-US/AnimatingObjects/SkeletalMeshAnimation/AnimHowTo/AdditiveAnimations/index.html)
+* ["Custom Logic" Tutorial Series of NPC Manager](https://www.youtube.com/watch?v=e5femnMekSg)
+
+***Locomotions with Upper-Body Montages (30s Video):***
+
+[![Locomotions with Upper-Body Montages](http://img.youtube.com/vi/0CJ4hmiWiMI/0.jpg)](http://www.youtube.com/watch?v=0CJ4hmiWiMI "Locomotions with Upper-Body Montages")
 
 Screenshot (Main Logic for Locomotions)
 ![Screenshot (Main Logic for Locomotions)](pics/pic2.png "Screenshot (Main Logic for Locomotions)")
