@@ -21,6 +21,8 @@ A scene prototype was created as a demonstration, for the team artists who want 
 * Objective: Create a simple nightclub with NPCs milling around, watching stages, sitting and chatting, etc.
 * Scene: A club with a bar, several stripper stages, booths, and a mezzanine (overlook) area with stairs.
 * Extra: Try to make it look like a popular, packed bar.
+
+Reference: ["UE4: What is BSP and When Should You Use It?" Tutorial by World of Level Design](https://www.worldofleveldesign.com/categories/ue4/bsp-01-what-is-bsp.php)
  
 ***Club Scene Prototype (26s Video):***
 
@@ -38,7 +40,7 @@ This enables a custom task for walking with upper-body montages (e.g. talking/sm
 References: 
 * ["BP 3rd Person Game" Tutorial Series by Unreal Engine](https://www.youtube.com/watch?v=hRO82u1phyw&list=PLhf5YCdusazmDTAEdV5jDhKWeGE1iqF2X)
 * ["Using Layered Animations" Unreal Engine 4 Documentation](https://docs.unrealengine.com/en-US/AnimatingObjects/SkeletalMeshAnimation/AnimHowTo/AdditiveAnimations/index.html)
-* ["Custom Logic" Tutorial Series of NPC Manager](https://www.youtube.com/watch?v=e5femnMekSg)
+* ["Custom Logic" Tutorial of NPC Manager](https://www.youtube.com/watch?v=e5femnMekSg)
 
 ***Locomotions with Upper-Body Montages (30s Video):***
 
