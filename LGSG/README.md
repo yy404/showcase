@@ -31,10 +31,10 @@ It is a one-player game where the player stars as a Robocop-like non-human robot
 ## References
 
 ### Perforce on AWS
-* [Getting Started with Amazon Web Services](https://aws.amazon.com/getting-started/)
-* [How To Deploy Helix Core on AWS | Perforce](https://www.perforce.com/webinars/vcs/how-deploy-helix-core-aws)
-* [Setting Up Perforce: How to Install Helix Core on AWS](https://www.perforce.com/products/helix-core/install-helix-core-on-aws#tab-panel-43116)
-* [Populating Perforce With An Unreal Engine Source Build](https://allarsblog.com/2017/04/05/populating-perforce-with-an-unreal-engine-source-build/)
+* ["Getting Started with Amazon Web Services"](https://aws.amazon.com/getting-started/)
+* ["Perforce: How To Deploy Helix Core on AWS"](https://www.perforce.com/webinars/vcs/how-deploy-helix-core-aws)
+* ["Setting Up Perforce: How to Install Helix Core on AWS"](https://www.perforce.com/products/helix-core/install-helix-core-on-aws#tab-panel-43116)
+* ["Populating Perforce With An Unreal Engine Source Build"](https://allarsblog.com/2017/04/05/populating-perforce-with-an-unreal-engine-source-build/)
 
 ### Unreal Engine Basics
 * ["Understanding the Basics" Unreal Engine 4 Documentation](https://docs.unrealengine.com/en-US/Basics/index.html)
