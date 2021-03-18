@@ -34,6 +34,7 @@ public:
         // Set a nickname
         std::cout << "Welcome! Please input your nickname: ";
         std::getline(std::cin, nickname_);
+        std::cout << "Hello " << nickname_ << "! You can chat now!" << std::endl;
 
         // Create the socket so that multiple may be bound to the same address.
         receive_socket_.open(receive_endpoint_.protocol());
@@ -50,7 +51,7 @@ public:
     
     ~messenger()
     {
-        std::cout << "Destructor of the messenger class." << count_ << std::endl;
+        std::cout << "Destructor of the messenger class." << std::endl;
     }
 
     void do_send(std::string line)
