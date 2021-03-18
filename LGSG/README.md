@@ -27,3 +27,34 @@ It is a one-player game where the player stars as a Robocop-like non-human robot
 * Player shooting: left click to eliminate an enemy and right click to refill ammo; three placeholder audio files for shooting/reloading/no-ammo. 
 * UI: widgets for basic menu ("TAB" key to toggle pause) and gameplay information; one placeholder crosshair image for the mouse cursor.
 
+
+## References
+
+### Perforce on AWS
+* [Getting Started with Amazon Web Services](https://aws.amazon.com/getting-started/)
+* [How To Deploy Helix Core on AWS | Perforce](https://www.perforce.com/webinars/vcs/how-deploy-helix-core-aws)
+* [Setting Up Perforce: How to Install Helix Core on AWS](https://www.perforce.com/products/helix-core/install-helix-core-on-aws#tab-panel-43116)
+* [Populating Perforce With An Unreal Engine Source Build](https://allarsblog.com/2017/04/05/populating-perforce-with-an-unreal-engine-source-build/)
+
+### Unreal Engine Basics
+* ["Understanding the Basics" Unreal Engine 4 Documentation](https://docs.unrealengine.com/en-US/Basics/index.html)
+* ["Programming Quick Start" Unreal Engine 4 Documentation](https://docs.unrealengine.com/en-US/ProgrammingAndScripting/ProgrammingWithCPP/CPPProgrammingQuickStart/index.html)
+* ["C++ Programming Tutorials" Unreal Engine 4 Documentation](https://docs.unrealengine.com/en-US/ProgrammingAndScripting/ProgrammingWithCPP/CPPTutorials/index.html)
+* ["Blueprints Quick Start Guide" Unreal Engine 4 Documentation](https://docs.unrealengine.com/en-US/ProgrammingAndScripting/Blueprints/QuickStart/index.html)
+
+### Tutorials
+* ["Blueprints - Essential Concepts" Unreal Online Learning](https://www.unrealengine.com/en-US/onlinelearning-courses/blueprints---essential-concepts)
+* ["Converting Blueprints to C++" Unreal Online Learning](https://www.unrealengine.com/en-US/onlinelearning-courses/converting-blueprints-to-c)
+* ["Twin Stick Shooter with Blueprints" Unreal Online Learning](https://www.unrealengine.com/en-US/onlinelearning-courses/twin-stick-shooter-with-blueprints)
+* ["LightGun Arcade Shooters - Unreal Engine Tutorial (Part 1 - Shooting)"](https://www.youtube.com/watch?v=ydrl5WNvlW8)
+* ["Arcade Lightgun Shooters - Unreal Engine Tutorial (Part 2 - Spline Camera Movement)"](https://www.youtube.com/watch?v=HzDbcM22mig)
+
+### Standards
+* ["Coding Standard" Unreal Engine 4 Documentation](https://docs.unrealengine.com/en-US/ProductionPipelines/DevelopmentSetup/CodingStandard/index.html)
+* ["Gamemakin UE4 Style Guide"](https://github.com/Allar/ue4-style-guide) 
+
+### Miscellaneous
+* ["Engine/BasicShapes/Cube versus StarterContent/Shape_Cube differences"](https://forums.unrealengine.com/development-discussion/content-creation/1816442-engine-basicshapes-cube-versus-startercontent-shape_cube-differences)
+* ["Spawning/Destroying an Actor Overview" Unreal Engine 4 Documentation](https://docs.unrealengine.com/en-US/Gameplay/HowTo/SpawnAndDestroyActors/Blueprints/index.html)
+* ["How to make character move along spline with input keys"](https://answers.unrealengine.com/questions/900011/how-to-make-character-move-along-spline-with-input.html)
+
