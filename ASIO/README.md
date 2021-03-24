@@ -24,73 +24,13 @@ class messenger
 public:
     messenger(boost::asio::io_context& io_context,
         const boost::asio::ip::address& listen_address,
-        const boost::asio::ip::address& multicast_address)
-        : transmit_endpoint_(multicast_address, multicast_port),
-        receive_endpoint_(listen_address, multicast_port),
-        transmit_socket_(io_context, transmit_endpoint_.protocol()),
-        receive_socket_(io_context),
-        nickname_("noname")
-    {
-        // Set a nickname
-        std::cout << "Welcome! Please input your nickname: ";
-        std::getline(std::cin, nickname_);
-        std::cout << "Hello " << nickname_ << "! You can chat now!" << std::endl;
-
-        // Create the socket so that multiple may be bound to the same address.
-        receive_socket_.open(receive_endpoint_.protocol());
-        receive_socket_.set_option(boost::asio::ip::udp::socket::reuse_address(true));
-        receive_socket_.bind(receive_endpoint_);
-
-        // Join the multicast group.
-        receive_socket_.set_option(
-            boost::asio::ip::multicast::join_group(multicast_address));
-
-        // Listen to receive data
-        do_receive();
-    }
-    
-    ~messenger()
-    {
-        std::cout << "Destructor of the messenger class." << std::endl;
-    }
-
-    void do_send(std::string line)
-    {
-        message_ = line;
-        do_transmit();
-    }
+        const boost::asio::ip::address& multicast_address);
+    ~messenger();
+    void do_send(std::string);
 
 private:
-    void do_transmit()
-    {
-        std::ostringstream os;
-
-        os << nickname_ << ": " << message_;
-        message_ = os.str();
-
-        transmit_socket_.async_send_to(
-            boost::asio::buffer(message_), transmit_endpoint_,
-            [this](boost::system::error_code ec, std::size_t /*length*/)
-            {
-                // pass
-            });
-    }
-
-    void do_receive()
-    {
-        receive_socket_.async_receive_from(
-            boost::asio::buffer(data_), receive_endpoint_,
-            [this](boost::system::error_code ec, std::size_t length)
-            {
-                if (!ec)
-                {
-                    std::cout.write(data_.data(), length);
-                    std::cout << std::endl;
-
-                    do_receive();
-                }
-            });
-    }
+    void do_transmit();
+    void do_receive();
 
 private:
     boost::asio::ip::udp::endpoint transmit_endpoint_;
@@ -110,14 +50,14 @@ int main(int argc, char* argv[])
         // All programs that use asio need to have at least one I/O execution context.
         // An I/O execution context provides access to I/O functionality.
         boost::asio::io_context io_context;
-        
+
         // "0.0.0.0" means listen on every available network interface in this contex
-        std::string listen_address_raw = "0.0.0.0"; 
-        
+        std::string listen_address_raw = "0.0.0.0";
+
         // The multicast addresses range from 239.0.0.0 to 239.255.255.255 are the administratively scoped addresses.
         // They would be considered local, not globally unique, 
         // and can be reused in domains administered by different organizations. 
-        std::string multicast_address_raw = "239.255.0.1"; 
+        std::string multicast_address_raw = "239.255.0.1";
 
         // Construct a new messenger
         messenger s(io_context,
@@ -143,5 +83,75 @@ int main(int argc, char* argv[])
     }
 
     return 0;
+}
+
+
+messenger::messenger(boost::asio::io_context& io_context,
+    const boost::asio::ip::address& listen_address,
+    const boost::asio::ip::address& multicast_address)
+    : transmit_endpoint_(multicast_address, multicast_port),
+    receive_endpoint_(listen_address, multicast_port),
+    transmit_socket_(io_context, transmit_endpoint_.protocol()),
+    receive_socket_(io_context),
+    nickname_("noname")
+{
+    // Set a nickname
+    std::cout << "Welcome! Please input your nickname: ";
+    std::getline(std::cin, nickname_);
+    std::cout << "Hello " << nickname_ << "! You can chat now!" << std::endl;
+
+    // Create the socket so that multiple may be bound to the same address.
+    receive_socket_.open(receive_endpoint_.protocol());
+    receive_socket_.set_option(boost::asio::ip::udp::socket::reuse_address(true));
+    receive_socket_.bind(receive_endpoint_);
+
+    // Join the multicast group.
+    receive_socket_.set_option(
+        boost::asio::ip::multicast::join_group(multicast_address));
+
+    // Listen to receive data
+    do_receive();
+}
+
+messenger::~messenger()
+{
+    std::cout << "Destructor of the messenger class." << std::endl;
+}
+
+void messenger::do_send(std::string line)
+{
+    message_ = line;
+    do_transmit();
+}
+
+void messenger::do_transmit()
+{
+    std::ostringstream os;
+
+    os << nickname_ << ": " << message_;
+    message_ = os.str();
+
+    transmit_socket_.async_send_to(
+        boost::asio::buffer(message_), transmit_endpoint_,
+        [this](boost::system::error_code ec, std::size_t /*length*/)
+        {
+            // pass
+        });
+}
+
+void messenger::do_receive()
+{
+    receive_socket_.async_receive_from(
+        boost::asio::buffer(data_), receive_endpoint_,
+        [this](boost::system::error_code ec, std::size_t length)
+        {
+            if (!ec)
+            {
+                std::cout.write(data_.data(), length);
+                std::cout << std::endl;
+
+                do_receive();
+            }
+        });
 }
 ```
