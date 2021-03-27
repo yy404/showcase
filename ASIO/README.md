@@ -10,7 +10,7 @@ The following Multicast Messenger program is inspired by the official multicast 
 It works as a transceiver which integrates the functionalities of transmitting and receiving packets.
 Given a multicast address, this messenger program provides a local chat room without relying a specific server.
 
-```c++
+```c++ {.line-numbers}
 #include <iostream>
 #include <sstream>
 #include <string>
