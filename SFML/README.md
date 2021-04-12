@@ -1,6 +1,6 @@
 [SFML](https://www.sfml-dev.org/) is a C++ library for a simple application programming interface to various multimedia components in computers.
 
-Timberman is a 2D retro-style casual game. The game was built from scratch using the SFML library, based on the ["Beginning C++ Game Programming"](https://www.udemy.com/course/learning-path-c-game-programming/) course.
+Timberman is a 2D retro-style casual game. The game was built from scratch using the SFML library, based on the ["Learning Path: C++ Game Programming"](https://www.udemy.com/course/learning-path-c-game-programming/) course.
 
 ![Timberman demo gif](pics/TimbermanGif.gif)
 
