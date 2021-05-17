@@ -81,10 +81,6 @@ Actor::Actor(std::string spritePath) : speedX(0.0f), speedY(0.0f), isHidden(fals
     {
         sprite.setTexture(texture);
     }
-    else
-    {
-        // To handle the failure of loading texture
-    }
 
     // Record the pointer of this actor
     Actor::actorPtrVector.push_back(this);
@@ -97,16 +93,9 @@ void Actor::drawActors(sf::RenderWindow& window)
     // Draw the sprite of all actors
     for (auto actorPtr : Actor::actorPtrVector)
     {
-        if (actorPtr != nullptr)
+        if (actorPtr != nullptr && !actorPtr->isHidden)
         {
-            if (!actorPtr->isHidden)
-            {
-                window.draw(actorPtr->getSprite());
-            }
-        }
-        else
-        {
-            // To handle a null pointer
+            window.draw(actorPtr->getSprite());
         }
     }
 }
