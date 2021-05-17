@@ -5,10 +5,9 @@
 Full Metal Exorcist is intended to be a game in the form of a horror light gun game inspired by the House of the Dead and Resident Evil light gun games. 
 It is a one-player game where the player stars as a Robocop-like non-human robot exorcist, controlled remotely by a human priest, that goes through a variety of locations “exorcising” spiritual and demonic enemies with a series of guns and simple cinematic actions. 
 
-***Work-In-Progress Preview Video (21s):***
+***Work-In-Progress Preview Video (26s):***
 
-[![Video Link of Mini Demo Preview](http://img.youtube.com/vi/er8fd8DuEs4/0.jpg)](http://www.youtube.com/watch?v=er8fd8DuEs4 "Video Link of Mini Demo Preview")
-
+[![Video Link of Mini Demo Preview](http://img.youtube.com/vi/abvJ19WL8cc/0.jpg)](http://www.youtube.com/watch?v=abvJ19WL8cc "Video Link of Mini Demo Preview")
 
 ## Milestone Planning
 
