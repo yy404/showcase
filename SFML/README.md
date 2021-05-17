@@ -1,18 +1,18 @@
 # Intro
 [SFML](https://www.sfml-dev.org/) is a C++ library for a simple application programming interface to various multimedia components in computers.
 
-Timberman is a 2D retro-style casual game, where the player controls a timerman (left/right arrow keys) to chop a tree and dodge branches.
+Timberman is a 2D retro-style casual game, where the player controls a timberman (left/right arrow keys) to chop a tree and dodge branches.
 
 The game was built from scratch using the SFML library, based on the ["Learning Path: C++ Game Programming"](https://www.udemy.com/course/learning-path-c-game-programming/) course.
 
 ![Timberman demo gif](pics/TimbermanGif.gif)
 
 # Motivation
-The original tutorial code is straightforward to implement the Timberman gameplay. 
+[The original tutorial code](https://github.com/yy404/showcase/blob/main/SFML/TutorialCode.md) is straightforward to implement the Timberman gameplay. 
 
 It is great to learn SFML for the first time, but the code is less ***reusable*** and ***extensible***.
 
-By rewriting the code base, I made it as a more general engine for similar games based on 2D sprites.
+[By rewriting the code base](https://github.com/yy404/Timber/tree/master/Code), I made it as a more general engine for similar games based on 2D sprites.
 
 # Contributions
 There are two key contributions: abstracting game actors and organising the game loop.
