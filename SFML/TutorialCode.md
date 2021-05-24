@@ -16,13 +16,13 @@ void updateBranches(int seed);
 const int NUM_BRANCHES = 6;
 sf::Sprite branches[NUM_BRANCHES];
 
+// Where is the player/branch? 
+// Left or Right
 enum class side { LEFT, RIGHT, NONE };
 side branchPositions[NUM_BRANCHES];
 
 int main(int, char const**)
 {
-// Where is the player/branch?
-// Left or Right
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(1920, 1080), "Timber!!!");
 
@@ -339,11 +339,11 @@ int main(int, char const**)
                                       spriteLog.getPosition().x + (logSpeedX * dt.asSeconds()),
                                       spriteLog.getPosition().y + (logSpeedY * dt.asSeconds()));
                 
-                // Has the insect reached the right hand edge of the screen?
+                // Has the log reached the edge of the screen?
                 if (spriteLog.getPosition().x < -100 ||
                     spriteLog.getPosition().x > 2000)
                 {
-                    // Set it up ready to be a whole new cloud next frame
+                    // Set it up ready to be a whole new log next frame
                     logActive = false;
                     spriteLog.setPosition(810, 720);
                 }
