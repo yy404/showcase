@@ -9,6 +9,9 @@ It is a one-player game where the player stars as a Robocop-like non-human robot
 
 [![Video Link of Mini Demo Preview](http://img.youtube.com/vi/abvJ19WL8cc/0.jpg)](http://www.youtube.com/watch?v=abvJ19WL8cc "Video Link of Mini Demo Preview")
 
+Demo Level (Making by Teammates):
+![Demo Level Making by Teammates](https://i.imgur.com/ieK8H9j.jpeg "Demo Level Making by Teammates")
+
 ## Milestone Planning
 
 *Note: the bold-italic font indicating DONE*
