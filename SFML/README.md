@@ -71,19 +71,19 @@ window.draw(spriteAxe);
 #include "Actor.hpp"
 
 // Define a static vector to record all actors
-std::vector<Actor*> Actor::actorPtrVector;
+std::vector<Actor*> Actor::sVectorActorPtr;
 
-Actor::Actor(std::string spritePath) : speedX(0.0f), speedY(0.0f), isHidden(false)
+Actor::Actor(std::string strSpritePath) : m_fSpeedX(0.0f), m_fSpeedY(0.0f), m_bIsHidden(false)
 {
     // Set the sprite given the full path of a texture 
-    std::string fullPath = resourcePath() + spritePath;
-    if (texture.loadFromFile(fullPath))
+    std::string strFullPath = resourcePath() + strSpritePath;
+    if (m_texture.loadFromFile(strFullPath))
     {
-        sprite.setTexture(texture);
+        m_sprite.setTexture(m_texture);
     }
 
     // Record the pointer of this actor
-    Actor::actorPtrVector.push_back(this);
+    Actor::sVectorActorPtr.push_back(this);
 }
 
 ...
@@ -91,11 +91,11 @@ Actor::Actor(std::string spritePath) : speedX(0.0f), speedY(0.0f), isHidden(fals
 void Actor::drawActors(sf::RenderWindow& window)
 {
     // Draw the sprite of all actors
-    for (auto actorPtr : Actor::actorPtrVector)
+    for (auto pActor : Actor::sVectorActorPtr)
     {
-        if (actorPtr != nullptr && !actorPtr->isHidden)
+        if (pActor != nullptr && !pActor->m_bIsHidden)
         {
-            window.draw(actorPtr->getSprite());
+            window.draw(pActor->getSprite());
         }
     }
 }
@@ -155,15 +155,15 @@ private:
     void update();
     void draw();
     
-    sf::RenderWindow window;
-    float windowWidth;
-    float windowHeight;
+    sf::RenderWindow m_window;
+    float m_fWindowWidth;
+    float m_fWindowHeight;
 
-    GameUI gameUI;
-    GameManager gameManager;
+    GameUI m_gameUI;
+    GameManager m_gameManager;
 
-    Actor background;
-    Tree tree;
-    Player player;
+    Actor m_actorBackground;
+    Tree m_actorTree;
+    Player m_actorPlayer;
 };
 ```
