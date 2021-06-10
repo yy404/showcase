@@ -5,9 +5,11 @@
 Full Metal Exorcist is intended to be a game in the form of a horror light gun game inspired by the House of the Dead and Resident Evil light gun games. 
 It is a one-player game where the player stars as a Robocop-like non-human robot exorcist, controlled remotely by a human priest, that goes through a variety of locations “exorcising” spiritual and demonic enemies with a series of guns and simple cinematic actions. 
 
-***Work-In-Progress Preview Video (26s):***
+*Contributions: I'm a programmer, cooperating with a level designer and an artist.*
 
-[![Video Link of Mini Demo Preview](http://img.youtube.com/vi/abvJ19WL8cc/0.jpg)](http://www.youtube.com/watch?v=abvJ19WL8cc "Video Link of Mini Demo Preview")
+***Work-In-Progress Preview Video (37s):***
+
+[![Video Link of Mini Demo Preview](http://img.youtube.com/vi/FnAuh5XTzfY/0.jpg)](https://youtu.be/FnAuh5XTzfY "Video Link of Mini Demo Preview")
 
 Demo Level (Making by Teammates):
 ![Demo Level Making by Teammates](https://i.imgur.com/ieK8H9j.jpeg "Demo Level Making by Teammates")
@@ -19,15 +21,22 @@ Demo Level (Making by Teammates):
 |        | Mini Demo <br /> (Single Room) | Full Demo <br /> (Single Level) | Full Game <br /> (More Levels) |
 | ------ | ----------------------- | ------------------------ | ----------------------- |
 | System | ***Menu (start/pause/end)*** <br /> ***HUD (crosshair/text)*** <br /> ***Audio (weapon)*** | Menu (options/credits) <br /> HUD (image/effects) <br /> Audio (SFX/BGM) | Menu (modes) <br /> Checkpoints <br /> Cinematic |
-| Shooter | ***Player Movement*** <br /> ***Player Stats*** (score) <br /> ***Weapon*** (***reload***/damage) | Player Orientation <br /> Weapon (splash/accuracy) <br /> Weapon (switch/auto) | Weapon (penetration) <br /> Weapon (bullet/missile) <br /> Weapon (bomb) |
-| Shootable | ***Enemy Spawner (pop up)*** <br /> ***Enemy AI (chasing)*** <br /> Enemy Attack (physical) <br /> Enemy Health/***Destroy***  | Enemy AI (in distance) <br /> Enemy Attack (magical) <br /> Animations/Particles <br /> Items | Enemy (Objects) <br /> Enemy (Boss) <br /> Hidden items/rooms  <br /> Hit box|
+| Shooter | ***Player Movement*** <br /> ***Player Stats (score)*** <br /> ***Weapon (reload/damage)*** | Player Orientation <br /> Weapon (splash/accuracy) <br /> Weapon (switch/auto) | Weapon (penetration) <br /> Weapon (bullet/missile) <br /> Weapon (bomb) |
+| Shootable | ***Enemy Spawner (pop up)*** <br /> ***Enemy AI (chasing)*** <br /> ***Enemy Attack (physical)*** <br /> Enemy Health/***Destroy***  | Enemy AI (in distance) <br /> Enemy Attack (magical) <br /> Animations/Particles <br /> Items | Enemy (Objects) <br /> Enemy (Boss) <br /> Hidden items/rooms  <br /> Hit box|
 
-### Features Done
-* Player movement: the player's location automatically changes along a spline; the start/stop can be triggered by custom events. 
-* Enemy spawner: a spawner generate an enemy at the spawner location; the spawner's tag binds it with a segment of the spline.
-* Enemy AI: simply chasing the player based on NavMesh. 
-* Player shooting: left click to eliminate an enemy and right click to refill ammo; three placeholder audio files for shooting/reloading/no-ammo. 
-* UI: widgets for basic menu ("TAB" key to toggle pause) and gameplay information; one placeholder crosshair image for the mouse cursor.
+### Key Features Done
+* System: 
+  * Menu: widgets for basic menu ("TAB" key to toggle pause).
+  * HUD: health, ammo, score, crosshair cursor.
+  * Damage feedback: camera shake, red screen, hit sound.
+* Shooter (Player) 
+  * Movement: the player's location automatically changes along a spline; the start/stop can be triggered by custom events. 
+  * Shooting: left click to eliminate an enemy and right click to refill ammo; audio files for shooting/reloading/no-ammo.
+  * Orientation: using spline's tangent to set the rotation of camera pawn.
+* Shootable (Enemy)
+  * Spawner: a spawner generate an enemy at the spawner location; the spawner's tag binds it with a segment of the spline.
+  * AI: chase the player based on NavMesh, and stop moving when attack the player.
+  * Damage: each EnemyCharacter has a box volume as the damage trigger (periodically damaging player when it overlaps with the player capsule volume).
 
 
 ## References
